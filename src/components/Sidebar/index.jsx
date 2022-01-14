@@ -118,7 +118,7 @@ function Sidebar({ openDrawer, setOpenDrawer, options }) {
   const drawer = (
     <List
       component="nav"
-      className={`sidebar ${classes.root}`}
+      className={`sidebar_primario ${classes.root}`}
       style={{ position: "sticky", top: "67px" }}
       subheader={
         <ListSubheader
@@ -126,7 +126,7 @@ function Sidebar({ openDrawer, setOpenDrawer, options }) {
           color={"primary"}
           component="div"
           id="nested-list-subheader"
-          className={classes.subheader}
+          className={`hacienda ${classes.subheader}`}
         >
           <ListItem
             button

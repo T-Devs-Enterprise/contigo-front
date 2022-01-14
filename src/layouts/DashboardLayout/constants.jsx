@@ -68,13 +68,13 @@ export const list = [
   },
   {
     id: "control-produccion",
-    title: "Control de Produccion",
+    title: "Control de Producción",
     tour: "sidebar__control__milk",
     img: Rec1,
     submenu: [
       {
         id: "produccion-lechera",
-        title: "Produccion Lechera",
+        title: "Producción Lechera",
         img: Rec15,
         submenu: [
           {
@@ -96,7 +96,7 @@ export const list = [
       },
       {
         id: "produccion-engorde",
-        title: "Produccion Engorde",
+        title: "Producción Engorde",
         img: Rec16,
         submenu: [
           {
@@ -376,29 +376,30 @@ export const list = [
     id: "tablero-control-gestión",
     title: "Tablero de Control de Gestión (PRO)",
     img: Rec17,
+    tour: "mejora",
     bottom: true,
   },
   {
     id: "gestion-asociación",
-    title: "Gestion de Asociación (PRO)",
+    title: "Gestión de Asociación (PRO)",
     img: Rec18,
     bottom: true,
   },
   {
     id: "capacitacion-noticias",
-    title: "Capacitacion y Noticias (PRO)",
+    title: "Capacitación y Noticias (PRO)",
     img: Rec19,
     bottom: true,
   },
   {
     id: "gestion-integracion-tecnológia",
-    title: "Gestion de Integracion de Tecnológia (PRO)",
+    title: "Gestión de Integración de Tecnológia (PRO)",
     img: Rec21,
     bottom: true,
   },
   {
     id: "gestion-activos-fijos",
-    title: "Gestion de Activos Fijos (PRO)",
+    title: "Gestión de Activos Fijos (PRO)",
     img: Rec20,
     bottom: true,
   },

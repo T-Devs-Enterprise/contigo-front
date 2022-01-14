@@ -5,7 +5,9 @@ import { useHistory, useLocation } from "react-router";
 import { farmActions } from "../redux/actions/farm.actions";
 import { useStyles } from "../styles";
 import { ROUTES_DICT } from "./routesDict";
-
+import Joyride from "react-joyride";
+import { useState } from "react";
+import steps from "./reactTourSteps";
 /**
  * @returns {Component}
  * @description Wrapper de autentificacion que solicita datos globales de prioridad (Farm actual y Agronegocio actual)
@@ -26,6 +28,8 @@ const AuthWrapper = ({ children }) => {
   const user = useSelector((state) => state.auth.user);
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
 
+  const [auth, setAuth] = useState(false);
+
   useEffect(() => {
     if (!currentFarm || !currentAgribusiness) {
       dispatch(farmActions.findFarmByOwnerId(user?._id)).then((e) => {
@@ -35,6 +39,16 @@ const AuthWrapper = ({ children }) => {
       });
     }
   }, [dispatch, currentFarm, currentAgribusiness, user]);
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      setAuth(true);
+    } else {
+      setAuth(false);
+    }
+  }, [location]);
+
   return (
     <>
       {!currentAgribusiness &&
@@ -45,6 +59,21 @@ const AuthWrapper = ({ children }) => {
         </div>
       ) : (
         children
+      )}
+      {auth && (
+        <Joyride
+          continuous={true}
+          run={true}
+          scrollToFirstStep={true}
+          showProgress={true}
+          showSkipButton={true}
+          steps={steps}
+          styles={{
+            options: {
+              zIndex: 10000,
+            },
+          }}
+        />
       )}
     </>
   );

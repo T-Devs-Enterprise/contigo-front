@@ -68,7 +68,7 @@ function MenuDropdown({ isLogin, setLoginState }) {
     >
       {isLogin && (
         <React.Fragment>
-          <Grid item>
+          <Grid item className="reporte">
             <Button
               color="primary"
               variant="contained"
@@ -78,7 +78,6 @@ function MenuDropdown({ isLogin, setLoginState }) {
                 color: "#fff",
                 backgroundColor: "#00A796",
               }}
-              className="report"
               onClick={() => setOpenDialog(true)}
             >
               Reportar
@@ -104,7 +103,7 @@ function MenuDropdown({ isLogin, setLoginState }) {
               />
             </Dialog>
           </Grid>
-          <Grid item>
+          <Grid item className="botones">
             <AccountCircleIcon
               className={classes.iconColor}
               onClick={() => {

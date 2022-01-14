@@ -487,7 +487,7 @@ export const RENDER_ROUTES = [
     key: "Ventas",
     exact: false,
     component: ({ children }) => (
-      <DefaultPage title="Venta" chipList={saleRouteOptions()}>
+      <DefaultPage title="Ventas" chipList={saleRouteOptions()}>
         {(props) => children(props)}
       </DefaultPage>
     ),

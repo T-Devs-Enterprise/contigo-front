@@ -19,6 +19,7 @@ import CommentActions from "../../../redux/actions/comment.actions";
 const defaultInitValues = {
   description: "",
   type: "ERROR",
+  state: "OPEN",
 };
 
 const CommentForm = ({
